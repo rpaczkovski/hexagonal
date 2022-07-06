@@ -4,15 +4,17 @@ package com.meli.hexagonal.application.contoller;
 import com.meli.hexagonal.application.request.AddProductRequest;
 import com.meli.hexagonal.application.request.CreateOrderRequest;
 import com.meli.hexagonal.application.response.CreateOrderResponse;
-import com.meli.hexagonal.domain.service.ports.service.OrderServicePort;
+import com.meli.hexagonal.domain.ports.service.OrderServicePort;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
 
-    private final OrderServicePort orderService;
+    private OrderServicePort orderService;
 
+    @Autowired
     public OrderController(OrderServicePort orderService) {
         this.orderService = orderService;
     }

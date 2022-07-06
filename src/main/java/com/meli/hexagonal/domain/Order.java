@@ -51,7 +51,7 @@ public class Order {
                 .orElseThrow(() -> new DomainException("Product with " + id + " doesn't exist."));
     }
 
-    public OrderStatus OrderStatus() {
+    public OrderStatus getStatus() {
         return status;
     }
 

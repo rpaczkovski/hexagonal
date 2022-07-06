@@ -1,4 +1,4 @@
-package com.meli.hexagonal.domain.service.ports.repository;
+package com.meli.hexagonal.domain.ports.repository;
 
 import com.meli.hexagonal.domain.Order;
 

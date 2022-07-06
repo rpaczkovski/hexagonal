@@ -1,4 +1,4 @@
-package com.meli.hexagonal.domain.service.ports.service;
+package com.meli.hexagonal.domain.ports.service;
 
 import com.meli.hexagonal.domain.Product;
 
