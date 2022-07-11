@@ -8,23 +8,16 @@ enum Currency {
 
 public class Money {
 
-    private BigDecimal price;
+    private BigDecimal value;
     private Currency currency;
 
     public Money(BigDecimal price) {
-        validatePrice(price);
-        this.price = price;
+        this.value = price;
         this.currency = Currency.BRL;
     }
 
-    private void validatePrice(BigDecimal price) {
-        if(price.compareTo(new BigDecimal(0)) < 0) {
-            throw new IllegalArgumentException("The price cannot be less than zero.");
-        }
-    }
-
-    public BigDecimal getPrice() {
-        return price;
+    public BigDecimal getValue() {
+        return value;
     }
 
     public Currency getCurrency() {
